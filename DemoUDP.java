@@ -82,8 +82,8 @@ public class DemoUDP
             }
         }
     }
-
-    public static void main(String arg[]) throws Exception {
+	
+	public static void main(String arg[]) throws Exception {
         DemoUDP hendler = new DemoUDP();
         
         MainPanel panel = new MainPanel();
@@ -91,7 +91,7 @@ public class DemoUDP
         for (int count = 0; count < 10; count = count++ ) {
             
         hendler.sendUdp();
-        Thread.sleep(1000/5);
+        Thread.sleep(1000/5); // 5Hz frequency
         DemoUDP.data = MainPanel.sliderData;
         System.out.println("data is" + String.valueOf(DemoUDP.data));
         }
